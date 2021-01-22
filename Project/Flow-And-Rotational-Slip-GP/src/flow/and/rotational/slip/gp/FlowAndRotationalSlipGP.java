@@ -2,7 +2,7 @@ package flow.and.rotational.slip.gp;
 
 import java.util.Scanner;
 
-// @authors: Xhanter Izurieta, Carlos Jiménez, Alisson Lema, Martín Lema, Brayan López
+// @authors: UNKNOWN PROGRAM
 
 public class FlowAndRotationalSlipGP {
 
