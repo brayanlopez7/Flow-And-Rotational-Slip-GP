@@ -34,5 +34,18 @@ public class FlowAndRotationalSlip {
             System.out.println("Enter your menu option-->");
             option = (int) input.nextFloat();// TODO code application logic here
     
-    
+    switch(option){    
+                case 1 :
+                    System.out.println("Enter the calculated speed (m^3/hr)-->");
+                    
+                    float Q;
+                    float v=input.nextFloat();
+                    
+                    System.out.println("Enter the calculated time (min)--> ");
+                    
+                    float t=input.nextFloat();
+                    Q= v/t;
+                    System.out.println(" The Flow is whit speed -> " + v + " and "
+                            + " time -> " + t + " is ->" + Q);                                                                      
+                 break;
 
