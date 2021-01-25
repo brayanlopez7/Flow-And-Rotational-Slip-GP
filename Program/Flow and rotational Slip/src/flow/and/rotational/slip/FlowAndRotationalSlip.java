@@ -70,3 +70,18 @@ public class FlowAndRotationalSlip {
                      System.out.println("The rotational displacement is --> " + V  );
                                                
                 break;  
+				
+				case 0 :
+                    System.out.println(" See you later ");
+                    System.exit(0);
+                    break;
+                default :
+                    System.out.println("invalid option\n\n");
+                    break;
+                    
+            }
+        } while ( option !=0);
+        // TODO code application logic here
+    }
+    
+}
