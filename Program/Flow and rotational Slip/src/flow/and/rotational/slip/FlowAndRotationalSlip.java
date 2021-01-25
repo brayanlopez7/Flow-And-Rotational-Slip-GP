@@ -51,21 +51,28 @@ public class FlowAndRotationalSlip {
 
                 case 2 :
                  
-                    System.out.println("Enter the width of the break surface (Wr or Ar)-->");
-                    float Wr=input.nextFloat();
-                    
-                    System.out.println("Enter the length of the break surface (Lr)--> ");
-                    float Lr=input.nextFloat();
-                    
-                    System.out.println("Enter the depth of the break surface by "
-                    + "perpendicularity to the original topography "
-                    + "of the terrain(Dr or Pr)--> ");
-                    float Dr=input.nextFloat();
-                    
-                    float pi;
-                    pi= (float) 3.1415926535897932;
-                                                                              
-                    float V = (((pi)*(Wr*Dr*Lr))/(6));
+                   System.out.println("Enter the width of the break surface (Wr or Ar)-->");
+	                   float Wr = input.nextFloat();
+	
+
+	                   System.out.println("Enter the length of the break surface (Lr)--> ");
+	                    float Lr = input.nextFloat();
+	
+
+	                    System.out.println("Enter the depth of the break surface by "
+	                            + "perpendicularity to the original topography "
+	                            + "of the terrain(Dr or Pr)--> ");
+	                    float Dr = input.nextFloat();
+	
+
+	                    float pi;
+	                    pi = (float) 3.1415926535897932;
+	
+
+	                    float V = (((pi) * (Wr * Dr * Lr)) / (6));
+
+
+
                     
                      System.out.println("The rotational displacement is --> " + V  );
                                                
