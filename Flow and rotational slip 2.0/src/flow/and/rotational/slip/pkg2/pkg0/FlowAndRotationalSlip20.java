@@ -70,4 +70,19 @@ public class FlowAndRotationalSlip20 {
         System.out.println("Enter your menu option-->");
         option = (int) input.nextFloat();
         return option;
+}
+
+        private static void calculateFlowRate(Scanner input) {
+        System.out.println("Enter the calculated speed (m^3/hr)-->");
+        
+        float flow;
+        float speed = input.nextFloat();
+        
+        System.out.println("Enter the calculated time (min)--> ");
+        
+        float time = input.nextFloat();
+        flow = speed / time;
+        System.out.println(" The Flow is whit speed -> " + speed + " and "
+                + " time -> " + time + " is ->" + flow);
+    }
   
