@@ -116,3 +116,14 @@ private static void calculateRunoffRainwater(Scanner input) {
 
         System.out.println("The runoff of rainwater is --> " + runoff);
     }
+     
+        private static void transformKilometersToMeters(Scanner input) {
+        System.out.println("Enter the kilometers -->");
+        
+        float kilometers = input.nextFloat();
+        float meters;
+        
+        meters = (float) (kilometers * (1e+9));
+        
+        System.out.println("The " + kilometers + "in meters^3 is --> " + meters);
+    }
