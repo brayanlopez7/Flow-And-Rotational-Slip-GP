@@ -128,6 +128,16 @@ private static void calculateRunoffRainwater(Scanner input) {
         System.out.println("The " + seconds + "in minutes is --> " + minutes2);
     
     }
+        private static void TransformHoursToMinutes(Scanner input) {
+        System.out.println("Enter the hours --> ");
+        
+        float hours = input.nextFloat();
+        float minutes1;
+        
+        minutes1 = hours * 60;
+        
+        System.out.println("The " + hours + "in minutes is --> " + minutes1);
+    }
      
         private static void transformKilometersToMeters(Scanner input) {
         System.out.println("Enter the kilometers -->");
@@ -139,3 +149,12 @@ private static void calculateRunoffRainwater(Scanner input) {
         
         System.out.println("The " + kilometers + "in meters^3 is --> " + meters);
     }
+
+    private static void showExit() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static void doError() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}
