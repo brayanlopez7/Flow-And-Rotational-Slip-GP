@@ -116,6 +116,18 @@ private static void calculateRunoffRainwater(Scanner input) {
 
         System.out.println("The runoff of rainwater is --> " + runoff);
     }
+
+    private static void transformSecondsToMinutes(Scanner input) {
+        System.out.println("Enter the hours)--> ");
+        
+        float seconds = input.nextFloat();
+        float minutes2;
+        
+        minutes2 = seconds / 60;
+        
+        System.out.println("The " + seconds + "in minutes is --> " + minutes2);
+    
+    }
      
         private static void transformKilometersToMeters(Scanner input) {
         System.out.println("Enter the kilometers -->");
