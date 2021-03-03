@@ -85,4 +85,19 @@ public class FlowAndRotationalSlip20 {
         System.out.println(" The Flow is whit speed -> " + speed + " and "
                 + " time -> " + time + " is ->" + flow);
     }
-  
+  private static void calculateRotationalDisplacement(Scanner input) {
+        System.out.println("Enter the width of the break surface (Wr or Ar)-->");
+        float width = input.nextFloat();
+        
+        System.out.println("Enter the length of the break surface (Lr)--> ");
+        float length = input.nextFloat();
+        
+        System.out.println("Enter the depth of the break surface by "
+                + "perpendicularity to the original topography "
+                + "of the terrain(Dr or Pr)--> ");
+        float depth = input.nextFloat();
+        
+        float volume = (float) (((Math.PI) * (width * depth * length)) / (6));
+        
+        System.out.println("The rotational displacement is --> " + volume);
+    }
