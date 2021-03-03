@@ -101,3 +101,18 @@ public class FlowAndRotationalSlip20 {
         
         System.out.println("The rotational displacement is --> " + volume);
     }
+
+private static void calculateRunoffRainwater(Scanner input) {
+        System.out.println("Enter the average intensity of rainwater");
+        float averageIntensity = input.nextFloat();
+
+        System.out.println("Enter the total area of the zone in (ha)");
+        float areaSurface = input.nextFloat();
+
+        System.out.println("Enter the adimentional runoff coeficient");
+        float runoffCoef = input.nextFloat();
+
+        float runoff = (averageIntensity * areaSurface * runoffCoef);
+
+        System.out.println("The runoff of rainwater is --> " + runoff);
+    }
