@@ -7,43 +7,83 @@ public class FlowAndRotationalSlip20 {
 
     public static void main(String[] args) {
               
-   Scanner input = new Scanner(System.in);
-  boolean mainLoop = true;
-        int option = 0;
-
+Scanner input = new Scanner(System.in);
+        
+        
+        boolean mainLoop = true;
+        int option =0;                                              
         do {
             option = showMenu(input);
 
             switch (option) {
 
                 case 1:
-                    calculateFlowRate(input);
+                    
+                    System.out.println("Enter the calculated speed (m^3/hr)-->");
+                    float speed =input.nextFloat();
+                    System.out.println("Enter the calculated time (min)--> ");
+                    float time =input.nextFloat();
+                    System.out.println(" The Flow is whit speed -> " + speed + " and "
+                            + " time -> " + time + " is ->" + calculateFlowRate(speed,time));
                     break;
 
                 case 2:
-                    calculateRotationalDisplacement(input);
+                    
+                    System.out.println("Enter the width of the break surface (Wr or Ar)-->");
+                    float width =input.nextFloat() ;
+                    System.out.println("Enter the length of the break surface (Lr)--> ");
+                    float length = input.nextFloat() ;
+                    System.out.println("Enter the depth of the break surface by "
+                            + "perpendicularity to the original topography "
+                            + "of the terrain(Dr or Pr)--> ");
+                     float depth = input.nextFloat() ;
+                    System.out.println("The rotational displacement is --> " 
+                            + calculateRotationalDisplacement(width, length,depth));
                     break;
 
                 case 3:
-                    calculateRunoffRainwater(input);
+                    
+                    System.out.println("Enter the average intensity of rainwater");
+                     float averageIntensity = input.nextFloat() ;
+                    System.out.println("Enter the total area of the zone in (ha)");
+                     float areaSurface = input.nextFloat() ;       
+                    System.out.println("Enter the adimentional runoff coeficient");
+                    float runoffCoef = input.nextFloat() ;
+                    System.out.println("The runoff of rainwater is --> "
+                            + calculateRunoffRainwater(averageIntensity,
+                                    areaSurface, runoffCoef));
+
                     break;
 
                 case 4:
-                    TransformHoursToMinutes(input);
+
+                    System.out.println("Enter the hours --> ");
+                    float hours = input.nextFloat()  ;
+                    System.out.println("The " + hours + "in minutes is --> "
+                            + TransformHoursToMinutes(hours));
                     break;
 
                 case 5:
-                    transformSecondsToMinutes(input);
+                    
+                    System.out.println("Enter the seconds)--> ");
+                    float seconds = input.nextFloat() ;
+                    System.out.println("The " + seconds + "in minutes is --> " 
+                            + transformSecondsToMinutes( seconds));
                     break;
 
                 case 6:
-                    transformKilometersToMeters(input);
+                    
+                    System.out.println("Enter the kilometers -->");
+                    float kilometers = input.nextFloat() ;
+                    System.out.println("The " + kilometers + "in meters^3 is --> " 
+                            + transformKilometersToMeters( kilometers));
+
                     break;
 
                 case 0:
                     showExit();
                     break;
-                    
+
                 default:
                     doError();
                     break;
@@ -52,17 +92,90 @@ public class FlowAndRotationalSlip20 {
 
         } while (option != 0);
     }
+
+    // FUNCTIONS
+    private static void doError() {
+        System.out.println("INVALID OPTION\n\n");
+    }
+
+    private static void showExit() {
+        System.out.println(" See you later ");
+        System.exit(0);
+    }
+
+    private static float transformKilometersToMeters(float kilometers) {
+
+        float meters;
+
+        meters = (float) (kilometers * (1e+9));
+        
+        return meters;
+
+    }
+
+    private static float transformSecondsToMinutes(float seconds) {
+      
+        float minutes2;
+
+        minutes2 = seconds / 60;
+        
+        return minutes2;
+
+    }
+
+    private static float TransformHoursToMinutes(float hours) {       
+
+        float minutes1;
+
+        minutes1 = hours * 60;
+        
+        return minutes1;
+
+    }
+
+    private static float calculateRunoffRainwater( float averageIntensity,float areaSurface,float runoffCoef  ) {
+
+        float runoff;
+        
+        runoff=(averageIntensity * areaSurface * runoffCoef);
+        
+        return runoff ;
+
+    }
+
+    private static float calculateRotationalDisplacement(float width,float length,  float depth) {
+
+        float volume;
+        
+        volume = (float) (((Math.PI) * (width * depth * length)) / (6));
+        
+        return volume;
     
+    }
+
+    private static float calculateFlowRate(float speed, float time) {
+
+        float flow;
+
+        flow = speed / time;
+        
+        return flow;
+    }
+
     private static int showMenu(Scanner input) {
         int option;
-        System.out.println("Hello, choose an option");
-        System.out.println("1.-Calculate the flow rate by speed and time");
-        System.out.println("2.-Calculate the rotational displacement of a "
-                + "landslide using : Width of the break surface, length of"
-                + " the break surface and depth of the break surface by "
-                + "perpendicularity to the original topography "
-                + "of the terrain.");
-        System.out.println("3.- Calculate runoff of rainwater");
+        System.out.println("----------GROUP N°-5----------");
+        System.out.println("╔══════════════╗");
+        System.out.println(" HELLO, CHOOSE AN OPTION");
+        System.out.println("╚══════════════╝");
+        System.out.println("1.-Calculate the flow rate by speed and time.");
+        System.out.println("2.-Calculate the rotational displacement of a ");
+        System.out.println("landslide using : Width of the break surface ");
+        System.out.println("length of the break surface and depth of the ");
+        System.out.println(" break surface by perpendicularity to the ");
+        System.out.println("original topography of the terrain.");
+        System.out.println("3.- Calculate runoff of rainwater.");
+        System.out.println("------------------------------------------------");
         System.out.println("4.- Transform from hours --> minutes ");
         System.out.println("5.- Transform from seconds --> minutes ");
         System.out.println("6.- Transform from kilometers --> meters ");
@@ -70,91 +183,7 @@ public class FlowAndRotationalSlip20 {
         System.out.println("Enter your menu option-->");
         option = (int) input.nextFloat();
         return option;
-}
-
-        private static void calculateFlowRate(Scanner input) {
-        System.out.println("Enter the calculated speed (m^3/hr)-->");
-        
-        float flow;
-        float speed = input.nextFloat();
-        
-        System.out.println("Enter the calculated time (min)--> ");
-        
-        float time = input.nextFloat();
-        flow = speed / time;
-        System.out.println(" The Flow is whit speed -> " + speed + " and "
-                + " time -> " + time + " is ->" + flow);
     }
-  private static void calculateRotationalDisplacement(Scanner input) {
-        System.out.println("Enter the width of the break surface (Wr or Ar)-->");
-        float width = input.nextFloat();
-        
-        System.out.println("Enter the length of the break surface (Lr)--> ");
-        float length = input.nextFloat();
-        
-        System.out.println("Enter the depth of the break surface by "
-                + "perpendicularity to the original topography "
-                + "of the terrain(Dr or Pr)--> ");
-        float depth = input.nextFloat();
-        
-        float volume = (float) (((Math.PI) * (width * depth * length)) / (6));
-        
-        System.out.println("The rotational displacement is --> " + volume);
-    }
+  
 
-private static void calculateRunoffRainwater(Scanner input) {
-        System.out.println("Enter the average intensity of rainwater");
-        float averageIntensity = input.nextFloat();
-
-        System.out.println("Enter the total area of the zone in (ha)");
-        float areaSurface = input.nextFloat();
-
-        System.out.println("Enter the adimentional runoff coeficient");
-        float runoffCoef = input.nextFloat();
-
-        float runoff = (averageIntensity * areaSurface * runoffCoef);
-
-        System.out.println("The runoff of rainwater is --> " + runoff);
-    }
-
-    private static void transformSecondsToMinutes(Scanner input) {
-        System.out.println("Enter the hours)--> ");
-        
-        float seconds = input.nextFloat();
-        float minutes2;
-        
-        minutes2 = seconds / 60;
-        
-        System.out.println("The " + seconds + "in minutes is --> " + minutes2);
-    
-    }
-        private static void TransformHoursToMinutes(Scanner input) {
-        System.out.println("Enter the hours --> ");
-        
-        float hours = input.nextFloat();
-        float minutes1;
-        
-        minutes1 = hours * 60;
-        
-        System.out.println("The " + hours + "in minutes is --> " + minutes1);
-    }
-     
-        private static void transformKilometersToMeters(Scanner input) {
-        System.out.println("Enter the kilometers -->");
-        
-        float kilometers = input.nextFloat();
-        float meters;
-        
-        meters = (float) (kilometers * (1e+9));
-        
-        System.out.println("The " + kilometers + "in meters^3 is --> " + meters);
-    }
-
-    private static void showExit() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private static void doError() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
