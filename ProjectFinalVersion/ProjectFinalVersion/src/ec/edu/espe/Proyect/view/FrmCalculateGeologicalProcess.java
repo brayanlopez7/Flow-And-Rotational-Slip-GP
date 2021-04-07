@@ -211,7 +211,7 @@ public class FrmCalculateGeologicalProcess extends javax.swing.JFrame {
                             .addComponent(btnCalculate3)
                             .addComponent(btnCalculate2)
                             .addComponent(btnCalculate1))
-                        .addGap(72, 72, 72))
+                        .addGap(72, 72, 72)) 
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(51, 51, 51)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
