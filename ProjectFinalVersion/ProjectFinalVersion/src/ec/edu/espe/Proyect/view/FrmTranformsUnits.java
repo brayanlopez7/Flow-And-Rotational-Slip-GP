@@ -178,8 +178,7 @@ public class FrmTranformsUnits extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConvertirActionPerformed
 
     private void btnturnIntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnturnIntoActionPerformed
-        double kilometers = Double.parseDouble(txtKilometers.getText());
-        txtMeters.setText(String.valueOf((kilometers * (1e+9))));
+      
     }//GEN-LAST:event_btnturnIntoActionPerformed
 
     /**
