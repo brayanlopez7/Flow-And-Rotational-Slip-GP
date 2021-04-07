@@ -160,7 +160,21 @@ public class FrmTranformsUnits extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNumeroActionPerformed
 
     private void btnConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertirActionPerformed
+      double valor =Double.parseDouble(txtNumero.getText());
+      int unidades1= cmbUnidades1.getSelectedIndex();
+      int unidades2= cmbUnidades2.getSelectedIndex();
       
+      operacionesController puente  = new  operacionesController ();
+      
+      puente.setValor(valor);
+      puente.setUnidades1(unidades1);
+      puente.setUnidades2(unidades2);
+      
+     double resultadofinal = puente.convertir();
+     
+      txtAreResult.setText(" ");
+      
+      txtAreResult.append("" + resultadofinal );
     }//GEN-LAST:event_btnConvertirActionPerformed
 
     private void btnturnIntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnturnIntoActionPerformed
