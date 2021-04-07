@@ -343,32 +343,4 @@ public class FrmCalculateGeologicalProcess extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCalculate1;
-    private javax.swing.JButton btnCalculate2;
-    private javax.swing.JButton btnCalculate3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField txtArea;
-    private javax.swing.JTextField txtAverage;
-    private javax.swing.JTextField txtDepth;
-    private javax.swing.JTextField txtLength;
-    private javax.swing.JTextField txtResult1;
-    private javax.swing.JTextField txtResult2;
-    private javax.swing.JTextField txtResult3;
-    private javax.swing.JTextField txtRunoff;
-    private javax.swing.JTextField txtSpeed;
-    private javax.swing.JTextField txtTime;
-    private javax.swing.JTextField txtWidth;
-    // End of variables declaration//GEN-END:variables
 }
