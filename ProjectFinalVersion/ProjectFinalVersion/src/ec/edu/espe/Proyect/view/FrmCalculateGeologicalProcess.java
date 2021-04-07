@@ -28,7 +28,33 @@ public class FrmCalculateGeologicalProcess extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        txtTime = new javax.swing.JTextField();
+        txtSpeed = new javax.swing.JTextField();
+        btnCalculate1 = new javax.swing.JButton();
+        txtResult1 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        txtResult2 = new javax.swing.JTextField();
+        btnCalculate2 = new javax.swing.JButton();
+        txtLength = new javax.swing.JTextField();
+        txtWidth = new javax.swing.JTextField();
+        txtDepth = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        txtResult3 = new javax.swing.JTextField();
+        txtRunoff = new javax.swing.JTextField();
+        txtArea = new javax.swing.JTextField();
+        txtAverage = new javax.swing.JTextField();
+        btnCalculate3 = new javax.swing.JButton();
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel1.setText("CACUALATE FLOW AND ROTATIONAL SLIP");
