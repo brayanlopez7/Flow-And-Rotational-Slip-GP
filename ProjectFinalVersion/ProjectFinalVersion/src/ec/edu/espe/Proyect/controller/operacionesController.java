@@ -52,7 +52,20 @@ public class operacionesController {
     }
     
     public double convertir(){
-        
+         if ( unidades1 ==0 && unidades2 ==1){
+            resultado = valor * 60;
+            
+        }else if ( unidades1 ==0 &&unidades2 == 0 ){
+            resultado  = valor;
+            
+        }else if (unidades2 ==0 && unidades1 ==1){
+            resultado = valor /60;
+            
+        }else if ( unidades2 ==0 &&unidades1 == 0 ){
+            resultado  = valor;   
+        }
+       
+        return resultado;
        
     }
      
