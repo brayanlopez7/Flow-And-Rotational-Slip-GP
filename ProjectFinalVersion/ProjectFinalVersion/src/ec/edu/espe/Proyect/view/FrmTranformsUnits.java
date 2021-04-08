@@ -45,6 +45,7 @@ public class FrmTranformsUnits extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 14)); // NOI18N
         jLabel1.setText("    Unit converter");
 
         txtNumero.addActionListener(new java.awt.event.ActionListener() {
@@ -53,10 +54,13 @@ public class FrmTranformsUnits extends javax.swing.JFrame {
             }
         });
 
-        cmbUnidades1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HORAS", "MINUTOS" }));
+        cmbUnidades1.setFont(new java.awt.Font("Trebuchet MS", 3, 14)); // NOI18N
+        cmbUnidades1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HOURS", "MINUTES" }));
 
-        cmbUnidades2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HORAS", "MINUTOS" }));
+        cmbUnidades2.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
+        cmbUnidades2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HOURS", "MINUTES" }));
 
+        btnConvertir.setFont(new java.awt.Font("Trebuchet MS", 3, 14)); // NOI18N
         btnConvertir.setText("Calculate");
         btnConvertir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,14 +68,23 @@ public class FrmTranformsUnits extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         txtAreResult.setColumns(20);
         txtAreResult.setRows(5);
         jScrollPane1.setViewportView(txtAreResult);
 
+        jLabel2.setFont(new java.awt.Font("Viner Hand ITC", 3, 11)); // NOI18N
         jLabel2.setText("Kilometers");
 
+        jLabel3.setFont(new java.awt.Font("Viner Hand ITC", 3, 12)); // NOI18N
         jLabel3.setText("Meters");
 
+        txtKilometers.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
+
+        txtMeters.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 14)); // NOI18N
+
+        btnturnInto.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         btnturnInto.setText("Calculate");
         btnturnInto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,29 +101,28 @@ public class FrmTranformsUnits extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(txtKilometers, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(101, 101, 101)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(cmbUnidades2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(cmbUnidades1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnConvertir)))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addGap(30, 30, 30)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(txtKilometers, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(cmbUnidades2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(cmbUnidades1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnConvertir))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(176, 176, 176)
                         .addComponent(jLabel4))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jLabel3)
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtMeters, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
@@ -118,7 +130,7 @@ public class FrmTranformsUnits extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(101, 101, 101)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

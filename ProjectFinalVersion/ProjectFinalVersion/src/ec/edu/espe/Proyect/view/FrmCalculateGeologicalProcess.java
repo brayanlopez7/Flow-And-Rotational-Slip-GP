@@ -54,17 +54,29 @@ public class FrmCalculateGeologicalProcess extends javax.swing.JFrame {
         txtArea = new javax.swing.JTextField();
         txtAverage = new javax.swing.JTextField();
         btnCalculate3 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel1.setText("CACUALATE FLOW AND ROTATIONAL SLIP");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
         jLabel2.setText("Calculate Flow Rate");
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel3.setFont(new java.awt.Font("Viner Hand ITC", 1, 12)); // NOI18N
         jLabel3.setText("Speed (m/s)");
 
+        jLabel4.setFont(new java.awt.Font("Viner Hand ITC", 1, 12)); // NOI18N
         jLabel4.setText("Time (s)");
 
+        txtTime.setBackground(new java.awt.Color(255, 255, 0));
+
+        txtSpeed.setBackground(new java.awt.Color(255, 255, 0));
+
+        btnCalculate1.setBackground(new java.awt.Color(255, 255, 102));
+        btnCalculate1.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         btnCalculate1.setText("Calculate");
         btnCalculate1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,21 +84,30 @@ public class FrmCalculateGeologicalProcess extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setText("Calculate Rotational Displacement");
+        txtResult1.setBackground(new java.awt.Color(102, 255, 102));
 
+        jLabel5.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
+        jLabel5.setText("Calculate Rotational Displacement");
+        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel6.setFont(new java.awt.Font("Viner Hand ITC", 1, 14)); // NOI18N
         jLabel6.setText("Depth (m^2)");
 
+        jLabel7.setFont(new java.awt.Font("Viner Hand ITC", 1, 14)); // NOI18N
         jLabel7.setText("Width (m^2)");
 
+        jLabel8.setFont(new java.awt.Font("Viner Hand ITC", 1, 14)); // NOI18N
         jLabel8.setText("Length (m^2)");
 
+        txtResult2.setBackground(new java.awt.Color(102, 255, 102));
         txtResult2.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentHidden(java.awt.event.ComponentEvent evt) {
                 txtResult2ComponentHidden(evt);
-               
             }
         });
 
+        btnCalculate2.setBackground(new java.awt.Color(255, 255, 102));
+        btnCalculate2.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         btnCalculate2.setText("Calculate");
         btnCalculate2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,26 +115,45 @@ public class FrmCalculateGeologicalProcess extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setText("Calculate Runoff Rainwater");
+        txtLength.setBackground(new java.awt.Color(204, 255, 102));
 
+        txtWidth.setBackground(new java.awt.Color(204, 255, 102));
+
+        txtDepth.setBackground(new java.awt.Color(204, 255, 102));
+
+        jLabel9.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
+        jLabel9.setText("Calculate Runoff Rainwater");
+        jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel10.setFont(new java.awt.Font("Viner Hand ITC", 1, 14)); // NOI18N
         jLabel10.setText("Average Intensity (L)");
 
+        jLabel11.setFont(new java.awt.Font("Viner Hand ITC", 1, 14)); // NOI18N
         jLabel11.setText("Area Surface (m^2)");
 
+        jLabel12.setFont(new java.awt.Font("Viner Hand ITC", 1, 14)); // NOI18N
         jLabel12.setText("Runoff Coef");
 
+        txtResult3.setBackground(new java.awt.Color(102, 255, 102));
         txtResult3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtResult3ActionPerformed(evt);
             }
         });
 
+        txtRunoff.setBackground(new java.awt.Color(153, 255, 255));
+
+        txtArea.setBackground(new java.awt.Color(153, 255, 255));
         txtArea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAreaActionPerformed(evt);
             }
         });
 
+        txtAverage.setBackground(new java.awt.Color(153, 255, 255));
+
+        btnCalculate3.setBackground(new java.awt.Color(255, 255, 102));
+        btnCalculate3.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         btnCalculate3.setText("Calculate");
         btnCalculate3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,23 +190,19 @@ public class FrmCalculateGeologicalProcess extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(107, 107, 107)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel7)
-                                            .addComponent(jLabel8)
-                                            .addComponent(jLabel6))
-                                        .addGap(40, 40, 40)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtDepth, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtWidth, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtLength, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(42, 42, 42))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtResult2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel6))
+                                .addGap(40, 40, 40)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtDepth, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtWidth, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtLength, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtResult2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,10 +214,12 @@ public class FrmCalculateGeologicalProcess extends javax.swing.JFrame {
                                     .addComponent(txtAverage, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtRunoff, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtArea, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel9)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(21, 21, 21)
-                                .addComponent(txtResult3, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtResult3, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(42, 42, 42)
+                                .addComponent(jLabel9)))
                         .addGap(59, 59, 59))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(137, 137, 137)
@@ -203,7 +241,6 @@ public class FrmCalculateGeologicalProcess extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -211,9 +248,11 @@ public class FrmCalculateGeologicalProcess extends javax.swing.JFrame {
                             .addComponent(btnCalculate3)
                             .addComponent(btnCalculate2)
                             .addComponent(btnCalculate1))
-                        .addGap(72, 72, 72)) 
+                        .addGap(72, 72, 72))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 3, Short.MAX_VALUE)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -278,13 +317,15 @@ public class FrmCalculateGeologicalProcess extends javax.swing.JFrame {
     }//GEN-LAST:event_txtResult2ComponentHidden
 
     private void btnCalculate2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculate2ActionPerformed
-        double n1,n2,n3,result ;
+          double n1,n2,n3,result ;
         n1 = Integer.parseInt(txtWidth.getText());
         n2=Integer.parseInt(txtLength.getText());
         n3=Integer.parseInt(txtDepth.getText());
-        result =  (((Math.PI) * (n1* n2 * n3)) / (6));
+        result = (((Math.PI) * (n1* n2 * n3)) / (6));
         
         txtResult2.setText(String.valueOf(result)); 
+    }                                             
+      
     }//GEN-LAST:event_btnCalculate2ActionPerformed
 
     private void txtResult3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtResult3ActionPerformed

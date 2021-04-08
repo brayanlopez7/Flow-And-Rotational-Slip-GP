@@ -39,8 +39,7 @@
                           </Group>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" pref="61" max="-2" attributes="0"/>
+                          <Component id="jLabel2" min="-2" pref="79" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="txtKilometers" min="-2" pref="87" max="-2" attributes="0"/>
                       </Group>
@@ -54,8 +53,8 @@
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" pref="55" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="txtMeters" min="-2" pref="104" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
@@ -66,7 +65,7 @@
                       <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="76" max="32767" attributes="0"/>
+              <EmptySpace pref="62" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -114,6 +113,9 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Trebuchet MS" size="14" style="3"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="    Unit converter"/>
       </Properties>
     </Component>
@@ -124,10 +126,13 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="cmbUnidades1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Trebuchet MS" size="14" style="3"/>
+        </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="2">
-            <StringItem index="0" value="HORAS"/>
-            <StringItem index="1" value="MINUTOS"/>
+            <StringItem index="0" value="HOURS"/>
+            <StringItem index="1" value="MINUTES"/>
           </StringArray>
         </Property>
       </Properties>
@@ -137,10 +142,13 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="cmbUnidades2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tempus Sans ITC" size="14" style="3"/>
+        </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="2">
-            <StringItem index="0" value="HORAS"/>
-            <StringItem index="1" value="MINUTOS"/>
+            <StringItem index="0" value="HOURS"/>
+            <StringItem index="1" value="MINUTES"/>
           </StringArray>
         </Property>
       </Properties>
@@ -150,6 +158,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnConvertir">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Trebuchet MS" size="14" style="3"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Calculate"/>
       </Properties>
       <Events>
@@ -157,6 +168,13 @@
       </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
+      </Properties>
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
@@ -173,20 +191,39 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Viner Hand ITC" size="11" style="3"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Kilometers"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Viner Hand ITC" size="12" style="3"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Meters"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtKilometers">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Trebuchet MS" size="11" style="0"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMeters">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tw Cen MT Condensed Extra Bold" size="14" style="3"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnturnInto">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Trebuchet MS" size="11" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Calculate"/>
       </Properties>
       <Events>
